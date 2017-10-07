@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    font-family: Roboto, sans-serif;
+  }
+  
+  mat-card {
+    max-width: 80%;
+    margin: 2em auto;
+    text-align: center;
+  }
+  
+  mat-toolbar-row {
+    justify-content: space-between;
+  }
+  
+.done {
+position: fixed;
+bottom: 20px;
+right: 20px;
+color: white;
+}
+
+.demo-progress-spinner {
+  width: 100%;
+  text-align: center;
+}
+.demo-progress-spinner .mat-progress-spinner, .demo-progress-spinner .mat-spinner {
+    display: inline-block;
+}
+
+.demo-progress-spinner-controls {
+  margin: 10px 0;
+}

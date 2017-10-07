@@ -1,0 +1,52 @@
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue.
+$theme1-primary: mat-palette($mat-blue-grey);
+$theme1-accent:  mat-palette($mat-pink, 500, 900, A100);
+
+// The warn palette is optional (defaults to red).
+$theme1-warn:    mat-palette($mat-deep-orange);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$theme1-theme: mat-light-theme($theme1-primary, $theme1-accent, $theme1-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($theme1-theme);
+
+.theme2-theme {
+  $theme2-primary: mat-palette($mat-light-blue);
+  $theme2-accent:  mat-palette($mat-yellow, 400);
+
+  $theme2-theme: mat-light-theme($theme2-primary, $theme2-accent);
+
+  @include angular-material-theme($theme2-theme);
+}
+
+.theme3-theme {
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue.
+$theme3-primary: mat-palette($mat-indigo);
+$theme3-accent:  mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$theme3-warn:    mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$theme3-theme: mat-light-theme($theme3-primary, $theme3-accent, $theme3-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($theme3-theme);
+}
